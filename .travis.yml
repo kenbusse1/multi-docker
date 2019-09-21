@@ -13,7 +13,7 @@ after_success:
   - docker build -t kenbusse/multi-nginx ./nginx
   - docker build -t kenbusse/multi-server ./server
   - docker build -t kenbusse/multi-worker ./worker
-    # Log in to the docker CLI
+    # Log into the docker CLI
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
   # Take those images and push them to docker hub
   - docker push kenbusse/multi-client
